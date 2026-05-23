@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #D4A853;
+  --color-gold-dark: #B8860B;
+  --color-gold-light: #F0D68A;
+  --color-red-dark: #8B0000;
+  --color-ink: #1a1a2e;
+  --color-ink-light: #16213e;
+  --color-paper: #fdf5e6;
+  --color-paper-dark: #f5e6c8;
+}
+
+:root {
+  font-family: 'Noto Serif SC', 'SimSun', 'STSong', serif;
+  background: linear-gradient(135deg, var(--color-ink) 0%, var(--color-ink-light) 100%);
+  color: var(--color-paper);
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* 古风滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink-light);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-dark);
+  border-radius: 3px;
+}
